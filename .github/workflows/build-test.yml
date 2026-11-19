@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-lint-test:
+    timeout-minutes: 60
     name: Build, Lint, and Test
     runs-on: ubuntu-20.04
     strategy:
@@ -40,6 +41,7 @@ jobs:
         if: ${{ !startsWith(github.head_ref, 'release/') }}
         run: yarn auto-changelog validate
   all-jobs-pass:
+    timeout-minutes: 60
     name: All jobs pass
     runs-on: ubuntu-20.04
     needs:
