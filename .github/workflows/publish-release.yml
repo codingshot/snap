@@ -6,6 +6,7 @@ on:
 
 jobs:
   publish-release:
+    timeout-minutes: 60
     permissions:
       contents: write
     if: |

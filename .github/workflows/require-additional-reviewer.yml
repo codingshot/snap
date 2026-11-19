@@ -6,6 +6,7 @@ on:
 
 jobs:
   require-additional-reviewer:
+    timeout-minutes: 60
     permissions:
       actions: read
       contents: read
